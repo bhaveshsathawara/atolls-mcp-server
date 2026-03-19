@@ -61,7 +61,6 @@ function createServer() {
 // ─── HTTP / SSE mode (Railway) ────────────────────────────────────────────────
 async function startHttpServer(port) {
     const app = (0, express_1.default)();
-    app.use(express_1.default.json());
     // Health check – Railway uses this to confirm the service is running
     app.get("/health", (_req, res) => {
         res.json({ status: "ok", service: "atolls-mcp-server" });
