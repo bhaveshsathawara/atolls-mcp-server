@@ -85,7 +85,7 @@ function createServer() {
 
 async function startHttpServer(port: number) {
   const app = express();
-  app.use(express.json());
+  
 
   // Health check – Railway uses this to confirm the service is running
   app.get("/health", (_req, res) => {
